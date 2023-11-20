@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */; };
+		D096F1FD2B0AA6B000401DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F1FC2B0AA6B000401DBE /* ContentView.swift */; };
+		D096F1FF2B0AA6B300401DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D096F1FE2B0AA6B300401DBE /* Assets.xcassets */; };
+		D096F2032B0AA6B300401DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D096F2022B0AA6B300401DBE /* Preview Assets.xcassets */; };
+		D096F20D2B0AA6B400401DBE /* truscoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F20C2B0AA6B400401DBE /* truscoopTests.swift */; };
+		D096F2172B0AA6B400401DBE /* truscoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2162B0AA6B400401DBE /* truscoopUITests.swift */; };
+		D096F2192B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2182B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift */; };
+		D096F2262B0ABD5500401DBE /* ScoopsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2252B0ABD5500401DBE /* ScoopsListView.swift */; };
+		D096F2282B0ABDB000401DBE /* Scoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2272B0ABDB000401DBE /* Scoop.swift */; };
+		D096F2412B0AC8FB00401DBE /* Futura Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22A2B0AC8F900401DBE /* Futura Condensed.ttf */; };
+		D096F2422B0AC8FB00401DBE /* Futura Condensed ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22B2B0AC8F900401DBE /* Futura Condensed ExtraBold.ttf */; };
+		D096F2432B0AC8FB00401DBE /* Futura Extra Bold Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22C2B0AC8F900401DBE /* Futura Extra Bold Condensed Oblique.otf */; };
+		D096F2442B0AC8FB00401DBE /* Futura Light Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22D2B0AC8F900401DBE /* Futura Light Condensed Oblique.otf */; };
+		D096F2452B0AC8FB00401DBE /* Futura Medium Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22E2B0AC8FA00401DBE /* Futura Medium Oblique.otf */; };
+		D096F2462B0AC8FB00401DBE /* Futura Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22F2B0AC8FA00401DBE /* Futura Medium.otf */; };
+		D096F2472B0AC8FB00401DBE /* Futura Bold Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2302B0AC8FA00401DBE /* Futura Bold Oblique.otf */; };
+		D096F2482B0AC8FB00401DBE /* Futura Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2312B0AC8FA00401DBE /* Futura Book.otf */; };
+		D096F2492B0AC8FB00401DBE /* Futura Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2322B0AC8FA00401DBE /* Futura Bold.otf */; };
+		D096F24A2B0AC8FB00401DBE /* Futura Extra Bold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2332B0AC8FA00401DBE /* Futura Extra Bold Condensed.otf */; };
+		D096F24B2B0AC8FB00401DBE /* Futura Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2342B0AC8FA00401DBE /* Futura Bold Italic.otf */; };
+		D096F24C2B0AC8FB00401DBE /* Futura Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2352B0AC8FA00401DBE /* Futura Light.otf */; };
+		D096F24D2B0AC8FB00401DBE /* Futura Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2362B0AC8FA00401DBE /* Futura Italic.ttf */; };
+		D096F24E2B0AC8FB00401DBE /* Futura Medium Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2372B0AC8FA00401DBE /* Futura Medium Condensed.otf */; };
+		D096F24F2B0AC8FB00401DBE /* Futura Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2382B0AC8FA00401DBE /* Futura Heavy.otf */; };
+		D096F2502B0AC8FB00401DBE /* Futura Bold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2392B0AC8FA00401DBE /* Futura Bold Condensed.otf */; };
+		D096F2512B0AC8FB00401DBE /* Futura Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23A2B0AC8FA00401DBE /* Futura Medium Italic.otf */; };
+		D096F2522B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23B2B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf */; };
+		D096F2532B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23C2B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf */; };
+		D096F2542B0AC8FB00401DBE /* Futura Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23D2B0AC8FB00401DBE /* Futura Regular.ttf */; };
+		D096F2552B0AC8FB00401DBE /* Futura Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23E2B0AC8FB00401DBE /* Futura Black.ttf */; };
+		D096F2562B0AC8FB00401DBE /* Futura Light Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23F2B0AC8FB00401DBE /* Futura Light Condensed.otf */; };
+		D096F2572B0AC8FB00401DBE /* Futura BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2402B0AC8FB00401DBE /* Futura BoldItalic.ttf */; };
+		D096F25A2B0AD2C300401DBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2592B0AD2C300401DBE /* Color.swift */; };
+		D096F25C2B0B03FF00401DBE /* ScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25B2B0B03FF00401DBE /* ScoopView.swift */; };
+		D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25D2B0B06D400401DBE /* AddScoopView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D096F2092B0AA6B400401DBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D096F1EF2B0AA6B000401DBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D096F1F62B0AA6B000401DBE;
+			remoteInfo = truscoop;
+		};
+		D096F2132B0AA6B400401DBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D096F1EF2B0AA6B000401DBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D096F1F62B0AA6B000401DBE;
+			remoteInfo = truscoop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D096F1F72B0AA6B000401DBE /* truscoop-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "truscoop-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truscoopApp.swift; sourceTree = "<group>"; };
+		D096F1FC2B0AA6B000401DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D096F1FE2B0AA6B300401DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D096F2002B0AA6B300401DBE /* truscoop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = truscoop.entitlements; sourceTree = "<group>"; };
+		D096F2022B0AA6B300401DBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D096F2082B0AA6B400401DBE /* truscoop-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "truscoop-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D096F20C2B0AA6B400401DBE /* truscoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truscoopTests.swift; sourceTree = "<group>"; };
+		D096F2122B0AA6B400401DBE /* truscoop-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "truscoop-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D096F2162B0AA6B400401DBE /* truscoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truscoopUITests.swift; sourceTree = "<group>"; };
+		D096F2182B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truscoopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D096F2252B0ABD5500401DBE /* ScoopsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopsListView.swift; sourceTree = "<group>"; };
+		D096F2272B0ABDB000401DBE /* Scoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoop.swift; sourceTree = "<group>"; };
+		D096F22A2B0AC8F900401DBE /* Futura Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Condensed.ttf"; sourceTree = "<group>"; };
+		D096F22B2B0AC8F900401DBE /* Futura Condensed ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Condensed ExtraBold.ttf"; sourceTree = "<group>"; };
+		D096F22C2B0AC8F900401DBE /* Futura Extra Bold Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Extra Bold Condensed Oblique.otf"; sourceTree = "<group>"; };
+		D096F22D2B0AC8F900401DBE /* Futura Light Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Condensed Oblique.otf"; sourceTree = "<group>"; };
+		D096F22E2B0AC8FA00401DBE /* Futura Medium Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Oblique.otf"; sourceTree = "<group>"; };
+		D096F22F2B0AC8FA00401DBE /* Futura Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium.otf"; sourceTree = "<group>"; };
+		D096F2302B0AC8FA00401DBE /* Futura Bold Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Oblique.otf"; sourceTree = "<group>"; };
+		D096F2312B0AC8FA00401DBE /* Futura Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Book.otf"; sourceTree = "<group>"; };
+		D096F2322B0AC8FA00401DBE /* Futura Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold.otf"; sourceTree = "<group>"; };
+		D096F2332B0AC8FA00401DBE /* Futura Extra Bold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Extra Bold Condensed.otf"; sourceTree = "<group>"; };
+		D096F2342B0AC8FA00401DBE /* Futura Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Italic.otf"; sourceTree = "<group>"; };
+		D096F2352B0AC8FA00401DBE /* Futura Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light.otf"; sourceTree = "<group>"; };
+		D096F2362B0AC8FA00401DBE /* Futura Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Italic.ttf"; sourceTree = "<group>"; };
+		D096F2372B0AC8FA00401DBE /* Futura Medium Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Condensed.otf"; sourceTree = "<group>"; };
+		D096F2382B0AC8FA00401DBE /* Futura Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Heavy.otf"; sourceTree = "<group>"; };
+		D096F2392B0AC8FA00401DBE /* Futura Bold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Condensed.otf"; sourceTree = "<group>"; };
+		D096F23A2B0AC8FA00401DBE /* Futura Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Italic.otf"; sourceTree = "<group>"; };
+		D096F23B2B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Condensed Oblique.otf"; sourceTree = "<group>"; };
+		D096F23C2B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Condensed Oblique.otf"; sourceTree = "<group>"; };
+		D096F23D2B0AC8FB00401DBE /* Futura Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Regular.ttf"; sourceTree = "<group>"; };
+		D096F23E2B0AC8FB00401DBE /* Futura Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Black.ttf"; sourceTree = "<group>"; };
+		D096F23F2B0AC8FB00401DBE /* Futura Light Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Condensed.otf"; sourceTree = "<group>"; };
+		D096F2402B0AC8FB00401DBE /* Futura BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura BoldItalic.ttf"; sourceTree = "<group>"; };
+		D096F2582B0ACA8100401DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D096F2592B0AD2C300401DBE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D096F25B2B0B03FF00401DBE /* ScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopView.swift; sourceTree = "<group>"; };
+		D096F25D2B0B06D400401DBE /* AddScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoopView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D096F1F42B0AA6B000401DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096F2052B0AA6B400401DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096F20F2B0AA6B400401DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D096F1EE2B0AA6B000401DBE = {
+			isa = PBXGroup;
+			children = (
+				D096F1F92B0AA6B000401DBE /* truscoop */,
+				D096F20B2B0AA6B400401DBE /* truscoopTests */,
+				D096F2152B0AA6B400401DBE /* truscoopUITests */,
+				D096F1F82B0AA6B000401DBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D096F1F82B0AA6B000401DBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D096F1F72B0AA6B000401DBE /* truscoop-ios.app */,
+				D096F2082B0AA6B400401DBE /* truscoop-iosTests.xctest */,
+				D096F2122B0AA6B400401DBE /* truscoop-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D096F1F92B0AA6B000401DBE /* truscoop */ = {
+			isa = PBXGroup;
+			children = (
+				D096F2582B0ACA8100401DBE /* Info.plist */,
+				D096F2292B0AC6C600401DBE /* Fonts */,
+				D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */,
+				D096F1FC2B0AA6B000401DBE /* ContentView.swift */,
+				D096F1FE2B0AA6B300401DBE /* Assets.xcassets */,
+				D096F2002B0AA6B300401DBE /* truscoop.entitlements */,
+				D096F2012B0AA6B300401DBE /* Preview Content */,
+				D096F2252B0ABD5500401DBE /* ScoopsListView.swift */,
+				D096F2272B0ABDB000401DBE /* Scoop.swift */,
+				D096F2592B0AD2C300401DBE /* Color.swift */,
+				D096F25B2B0B03FF00401DBE /* ScoopView.swift */,
+				D096F25D2B0B06D400401DBE /* AddScoopView.swift */,
+			);
+			path = truscoop;
+			sourceTree = "<group>";
+		};
+		D096F2012B0AA6B300401DBE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D096F2022B0AA6B300401DBE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D096F20B2B0AA6B400401DBE /* truscoopTests */ = {
+			isa = PBXGroup;
+			children = (
+				D096F20C2B0AA6B400401DBE /* truscoopTests.swift */,
+			);
+			path = truscoopTests;
+			sourceTree = "<group>";
+		};
+		D096F2152B0AA6B400401DBE /* truscoopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D096F2162B0AA6B400401DBE /* truscoopUITests.swift */,
+				D096F2182B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift */,
+			);
+			path = truscoopUITests;
+			sourceTree = "<group>";
+		};
+		D096F2292B0AC6C600401DBE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D096F23E2B0AC8FB00401DBE /* Futura Black.ttf */,
+				D096F23B2B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf */,
+				D096F2392B0AC8FA00401DBE /* Futura Bold Condensed.otf */,
+				D096F2342B0AC8FA00401DBE /* Futura Bold Italic.otf */,
+				D096F2302B0AC8FA00401DBE /* Futura Bold Oblique.otf */,
+				D096F2322B0AC8FA00401DBE /* Futura Bold.otf */,
+				D096F2402B0AC8FB00401DBE /* Futura BoldItalic.ttf */,
+				D096F2312B0AC8FA00401DBE /* Futura Book.otf */,
+				D096F22B2B0AC8F900401DBE /* Futura Condensed ExtraBold.ttf */,
+				D096F22A2B0AC8F900401DBE /* Futura Condensed.ttf */,
+				D096F22C2B0AC8F900401DBE /* Futura Extra Bold Condensed Oblique.otf */,
+				D096F2332B0AC8FA00401DBE /* Futura Extra Bold Condensed.otf */,
+				D096F2382B0AC8FA00401DBE /* Futura Heavy.otf */,
+				D096F2362B0AC8FA00401DBE /* Futura Italic.ttf */,
+				D096F22D2B0AC8F900401DBE /* Futura Light Condensed Oblique.otf */,
+				D096F23F2B0AC8FB00401DBE /* Futura Light Condensed.otf */,
+				D096F2352B0AC8FA00401DBE /* Futura Light.otf */,
+				D096F23C2B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf */,
+				D096F2372B0AC8FA00401DBE /* Futura Medium Condensed.otf */,
+				D096F23A2B0AC8FA00401DBE /* Futura Medium Italic.otf */,
+				D096F22E2B0AC8FA00401DBE /* Futura Medium Oblique.otf */,
+				D096F22F2B0AC8FA00401DBE /* Futura Medium.otf */,
+				D096F23D2B0AC8FB00401DBE /* Futura Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D096F1F62B0AA6B000401DBE /* truscoop-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D096F21C2B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-ios" */;
+			buildPhases = (
+				D096F1F32B0AA6B000401DBE /* Sources */,
+				D096F1F42B0AA6B000401DBE /* Frameworks */,
+				D096F1F52B0AA6B000401DBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "truscoop-ios";
+			productName = truscoop;
+			productReference = D096F1F72B0AA6B000401DBE /* truscoop-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D096F2072B0AA6B400401DBE /* truscoop-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D096F21F2B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-iosTests" */;
+			buildPhases = (
+				D096F2042B0AA6B400401DBE /* Sources */,
+				D096F2052B0AA6B400401DBE /* Frameworks */,
+				D096F2062B0AA6B400401DBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D096F20A2B0AA6B400401DBE /* PBXTargetDependency */,
+			);
+			name = "truscoop-iosTests";
+			productName = truscoopTests;
+			productReference = D096F2082B0AA6B400401DBE /* truscoop-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D096F2112B0AA6B400401DBE /* truscoop-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D096F2222B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-iosUITests" */;
+			buildPhases = (
+				D096F20E2B0AA6B400401DBE /* Sources */,
+				D096F20F2B0AA6B400401DBE /* Frameworks */,
+				D096F2102B0AA6B400401DBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D096F2142B0AA6B400401DBE /* PBXTargetDependency */,
+			);
+			name = "truscoop-iosUITests";
+			productName = truscoopUITests;
+			productReference = D096F2122B0AA6B400401DBE /* truscoop-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D096F1EF2B0AA6B000401DBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D096F1F62B0AA6B000401DBE = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					D096F2072B0AA6B400401DBE = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D096F1F62B0AA6B000401DBE;
+					};
+					D096F2112B0AA6B400401DBE = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D096F1F62B0AA6B000401DBE;
+					};
+				};
+			};
+			buildConfigurationList = D096F1F22B0AA6B000401DBE /* Build configuration list for PBXProject "truscoop-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D096F1EE2B0AA6B000401DBE;
+			productRefGroup = D096F1F82B0AA6B000401DBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D096F1F62B0AA6B000401DBE /* truscoop-ios */,
+				D096F2072B0AA6B400401DBE /* truscoop-iosTests */,
+				D096F2112B0AA6B400401DBE /* truscoop-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D096F1F52B0AA6B000401DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096F2572B0AC8FB00401DBE /* Futura BoldItalic.ttf in Resources */,
+				D096F2462B0AC8FB00401DBE /* Futura Medium.otf in Resources */,
+				D096F24B2B0AC8FB00401DBE /* Futura Bold Italic.otf in Resources */,
+				D096F24C2B0AC8FB00401DBE /* Futura Light.otf in Resources */,
+				D096F2472B0AC8FB00401DBE /* Futura Bold Oblique.otf in Resources */,
+				D096F2482B0AC8FB00401DBE /* Futura Book.otf in Resources */,
+				D096F2542B0AC8FB00401DBE /* Futura Regular.ttf in Resources */,
+				D096F2442B0AC8FB00401DBE /* Futura Light Condensed Oblique.otf in Resources */,
+				D096F24D2B0AC8FB00401DBE /* Futura Italic.ttf in Resources */,
+				D096F2512B0AC8FB00401DBE /* Futura Medium Italic.otf in Resources */,
+				D096F2522B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf in Resources */,
+				D096F2532B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf in Resources */,
+				D096F2562B0AC8FB00401DBE /* Futura Light Condensed.otf in Resources */,
+				D096F2502B0AC8FB00401DBE /* Futura Bold Condensed.otf in Resources */,
+				D096F2032B0AA6B300401DBE /* Preview Assets.xcassets in Resources */,
+				D096F2552B0AC8FB00401DBE /* Futura Black.ttf in Resources */,
+				D096F24F2B0AC8FB00401DBE /* Futura Heavy.otf in Resources */,
+				D096F24A2B0AC8FB00401DBE /* Futura Extra Bold Condensed.otf in Resources */,
+				D096F2422B0AC8FB00401DBE /* Futura Condensed ExtraBold.ttf in Resources */,
+				D096F2492B0AC8FB00401DBE /* Futura Bold.otf in Resources */,
+				D096F2432B0AC8FB00401DBE /* Futura Extra Bold Condensed Oblique.otf in Resources */,
+				D096F2452B0AC8FB00401DBE /* Futura Medium Oblique.otf in Resources */,
+				D096F24E2B0AC8FB00401DBE /* Futura Medium Condensed.otf in Resources */,
+				D096F2412B0AC8FB00401DBE /* Futura Condensed.ttf in Resources */,
+				D096F1FF2B0AA6B300401DBE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096F2062B0AA6B400401DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096F2102B0AA6B400401DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D096F1F32B0AA6B000401DBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096F2282B0ABDB000401DBE /* Scoop.swift in Sources */,
+				D096F25C2B0B03FF00401DBE /* ScoopView.swift in Sources */,
+				D096F1FD2B0AA6B000401DBE /* ContentView.swift in Sources */,
+				D096F2262B0ABD5500401DBE /* ScoopsListView.swift in Sources */,
+				D096F25A2B0AD2C300401DBE /* Color.swift in Sources */,
+				D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */,
+				D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096F2042B0AA6B400401DBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096F20D2B0AA6B400401DBE /* truscoopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D096F20E2B0AA6B400401DBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096F2192B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift in Sources */,
+				D096F2172B0AA6B400401DBE /* truscoopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D096F20A2B0AA6B400401DBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D096F1F62B0AA6B000401DBE /* truscoop-ios */;
+			targetProxy = D096F2092B0AA6B400401DBE /* PBXContainerItemProxy */;
+		};
+		D096F2142B0AA6B400401DBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D096F1F62B0AA6B000401DBE /* truscoop-ios */;
+			targetProxy = D096F2132B0AA6B400401DBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D096F21A2B0AA6B400401DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D096F21B2B0AA6B400401DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D096F21D2B0AA6B400401DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = truscoop/truscoop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"truscoop/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = truscoop/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peterbidoshi.truscoop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D096F21E2B0AA6B400401DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = truscoop/truscoop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"truscoop/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = truscoop/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peterbidoshi.truscoop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D096F2202B0AA6B400401DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peterbidoshi.truscoopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/truscoop-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/truscoop-ios";
+			};
+			name = Debug;
+		};
+		D096F2212B0AA6B400401DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peterbidoshi.truscoopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/truscoop-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/truscoop-ios";
+			};
+			name = Release;
+		};
+		D096F2232B0AA6B400401DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peterbidoshi.truscoopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = truscoop;
+			};
+			name = Debug;
+		};
+		D096F2242B0AA6B400401DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peterbidoshi.truscoopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = truscoop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D096F1F22B0AA6B000401DBE /* Build configuration list for PBXProject "truscoop-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096F21A2B0AA6B400401DBE /* Debug */,
+				D096F21B2B0AA6B400401DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D096F21C2B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096F21D2B0AA6B400401DBE /* Debug */,
+				D096F21E2B0AA6B400401DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D096F21F2B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096F2202B0AA6B400401DBE /* Debug */,
+				D096F2212B0AA6B400401DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D096F2222B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096F2232B0AA6B400401DBE /* Debug */,
+				D096F2242B0AA6B400401DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D096F1EF2B0AA6B000401DBE /* Project object */;
+}
