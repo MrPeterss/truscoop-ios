@@ -22,10 +22,10 @@ struct Scoop: Hashable {
 let articles: [Scoop] = [
     Scoop(
         id: "1",
-        url: "https://example.com/article1",
+        url: "https://apple.com/",
         name: "The Future of Artificial Intelligence",
         favicon: "placeholder_favicon",
-        top_img: "https://example.com/image1.jpg",
+        top_img: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
         date: Date(),
         summary: "Exploring the potential advancements and challenges in the field of AI.",
         ai_rating: "Central",
