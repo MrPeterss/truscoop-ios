@@ -14,14 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack (alignment: Alignment(horizontal: .leading, vertical: .top)) {
-                ScoopsListView()
-                Rectangle()
-                    .fill(LinearGradient(
-                        gradient: Gradient(colors: [.black.opacity(0.1), .white]),
-                      startPoint: .init(x: 0.50, y: 0.00),
-                      endPoint: .init(x: 0.50, y: 1.00)
-                    ))
-                    .frame(height: 8)
+                ScoopsListView(filter: filter).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
                 .safeAreaInset(edge:.top) {
                     VStack {
@@ -42,9 +35,8 @@ struct ContentView: View {
                             HStack(spacing: 33) {
                                 filterButton(filterName: "all")
                                 filterButton(filterName: "liberal")
-                                filterButton(filterName: "central")
+                                filterButton(filterName: "neutral")
                                 filterButton(filterName: "conservative")
-
                             }
                         }
                         .scrollIndicators(.hidden)

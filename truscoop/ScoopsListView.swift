@@ -7,33 +7,54 @@
 
 import SwiftUI
 
-struct ScoopButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-            configuration.label
-    }
-}
-
 struct ScoopsListView: View {
     
+    var filter: String
+    
     var body: some View {
-        List(articles, id: \.self) { scoop in
-            ZStack {
-                scoopRow(scoop)
-                NavigationLink {
-                    ScoopView(scoop: scoop)
-                } label: {
-                    EmptyView()
-                }
-                .opacity(0.0)
+        ZStack (alignment: Alignment(horizontal: .center, vertical: .top)) {
+            VStack {
+                Rectangle()
+                    .fill(LinearGradient(
+                        gradient: Gradient(colors: [.black.opacity(0.1), .clear]),
+                        startPoint: .init(x: 0.50, y: 0.00),
+                        endPoint: .init(x: 0.50, y: 1.00)
+                    ))
+                    .stroke(.clear)
+                    .frame(height: 7)
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                Spacer()
+                Rectangle()
+                    .fill(LinearGradient(
+                        gradient: Gradient(colors: [.clear, .black.opacity(0.2)]),
+                        startPoint: .init(x: 0.50, y: 0.00),
+                        endPoint: .init(x: 0.50, y: 1.00)
+                    ))
+                    .stroke(.clear)
+                    .frame(height: 50)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
-            .listRowSeparator(.hidden)
-            .listRowBackground(Color.white)
+            .zIndex(10)
+            List(filter == "all" ? articles : articles.filter({ $0.ai_rating == filter }), id: \.self) { scoop in
+                ZStack {
+                    scoopRow(scoop)
+                    NavigationLink {
+                        ScoopView(scoop: scoop)
+                    } label: {
+                        EmptyView()
+                    }
+                    .opacity(0.0)
+                }
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.white)
+                .listStyle(.plain)
+            }
+            .listRowSpacing(20)
+            .scrollIndicators(.hidden)
             .listStyle(.plain)
-            Spacer().zIndex(-1)
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
         }
-        .scrollIndicators(.hidden)
-        .listStyle(.plain)
-        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
     }
     
     private func scoopRow(_ article: Scoop) -> some View {
@@ -71,9 +92,9 @@ struct ScoopsListView: View {
                             .background(
                                 Group {
                                     switch article.ai_rating {
-                                    case "Left":
+                                    case "liberal":
                                         Color.blue
-                                    case "Right":
+                                    case "conservative":
                                         Color.red
                                     default:
                                         Color.gray
@@ -84,12 +105,6 @@ struct ScoopsListView: View {
                             .foregroundColor(.clear)
                             .frame(width: 26, height: 3)
                             .background(.black)
-                    }
-                    HStack(spacing: 0) {
-                        Text(String(article.user_rating))
-                            .font(.custom("Futura Bold", size: 13))
-                        Text("/5")
-                            .font(.custom("Futura Bold", size: 13))
                     }
                     Spacer()
                     HStack (spacing: 5) {
@@ -107,5 +122,5 @@ struct ScoopsListView: View {
 }
 
 #Preview {
-    ScoopsListView()
+    ScoopsListView(filter: "all")
 }
