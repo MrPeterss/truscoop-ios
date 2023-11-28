@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct ScoopButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+            configuration.label
+    }
+}
+
 struct ScoopsListView: View {
     
     var body: some View {
@@ -19,16 +25,15 @@ struct ScoopsListView: View {
                     EmptyView()
                 }
                 .opacity(0.0)
-
             }
             .listRowSeparator(.hidden)
+            .listRowBackground(Color.white)
             .listStyle(.plain)
             Spacer().zIndex(-1)
         }
         .scrollIndicators(.hidden)
         .listStyle(.plain)
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-        .buttonStyle(PlainButtonStyle())
     }
 
     private func scoopRow(_ article: Scoop) -> some View {

@@ -11,7 +11,7 @@ import SwiftUI
 struct truscoopApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(filter: "all")
         }
     }
 }
