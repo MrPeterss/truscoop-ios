@@ -53,11 +53,11 @@ struct ScoopsListView: View {
             .listRowSpacing(20)
             .scrollIndicators(.hidden)
             .listStyle(.plain)
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
         }
     }
 
-    private func scoopRow(_ article: Scoop) -> some View {
+    func scoopRow(_ article: Scoop) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
                 .background(.clear)
@@ -66,21 +66,33 @@ struct ScoopsListView: View {
             
             HStack (alignment: .top) {
                 VStack (alignment: .leading) {
-                    Image(article.favicon)
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                        .cornerRadius(8)
+                    (article.favicon != "null" ?
+                     AnyView(
+                        AsyncImage(url: URL(string: article.favicon)) { image in
+                            image.resizable()
+                                .frame(width: 32, height: 32)
+                                .cornerRadius(8)
+                        } placeholder: {
+                            Rectangle()
+                                .background(Color(hex: "000000"))
+                                .frame(width: 32, height: 32)
+                                .cornerRadius(8)
+                        }
+                     ):
+                        AnyView(Rectangle()
+                            .background(Color(hex: "000000"))
+                            .frame(width: 32, height: 32)
+                            .cornerRadius(8))
+                    )
                     
                     Text(article.name)
                         .font(.custom("Futura Bold Condensed", size: 26))
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer()
                     Text(article.summary)
                         .font(.system(size: 14))
-                        .lineLimit(4)
-                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(3)
                 }
+                .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 
                 Spacer()
                 
@@ -116,7 +128,7 @@ struct ScoopsListView: View {
                     }
                 }
             }
-            .padding()
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
         }
     }
 }
