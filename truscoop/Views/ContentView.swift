@@ -13,16 +13,25 @@ struct ContentView: View {
     @State var loading: Bool = false
     @State var searching: Bool = false
     
-    @State var searchParam: String = ""
+    @State var search: String = ""
     
     @FocusState var isFocusOn: Bool
     
+    @State var scoops: [Scoop] = articles
+    
+    func searchResults() -> Void {
+        if search.isEmpty {
+            scoops = articles
+        } else { 
+            scoops = articles.filter{$0.name.lowercased().contains(search.lowercased())}
+        }
+    }
+    
     var body: some View {
-        
         ZStack {
             NavigationStack {
                 ZStack (alignment: Alignment(horizontal: .leading, vertical: .top)) {
-                    ScoopsListView(filter: filter).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    ScoopsListView(filter: filter, scoops: $scoops).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
                 .safeAreaInset(edge:.top) {
                     VStack {
@@ -42,11 +51,15 @@ struct ContentView: View {
                                 (searching ?
                                     AnyView(
                                         HStack {
-                                            TextField("search", text: $searchParam)
+                                            TextField("search", text: $search)
+                                                .onChange(of: search) {
+                                                    searchResults()
+                                                }
+                                                .multilineTextAlignment(.trailing)
                                                 .focused($isFocusOn)
                                                 .font(
-                                                Font.custom("Inter", size: 16)
-                                                .weight(.medium)
+                                                    Font.custom("Inter", size: 16)
+                                                    .weight(.medium)
                                                 )
                                                 .padding(8)
                                                 .kerning(0.24)
@@ -123,6 +136,8 @@ struct ContentView: View {
         Button {
             searching = false
             isFocusOn = false
+            search = ""
+            searchResults()
         } label: {
             Image(systemName: "xmark")
                 .resizable()
