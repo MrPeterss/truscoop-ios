@@ -10,12 +10,20 @@ import SwiftUI
 struct ContentView: View {
     
     @State var filter: String
+    @State var loading: Bool = false
+    @State var searching: Bool = false
+    
+    @State var searchParam: String = ""
+    
+    @FocusState var isFocusOn: Bool
     
     var body: some View {
-        NavigationStack {
-            ZStack (alignment: Alignment(horizontal: .leading, vertical: .top)) {
-                ScoopsListView(filter: filter).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            }
+        
+        ZStack {
+            NavigationStack {
+                ZStack (alignment: Alignment(horizontal: .leading, vertical: .top)) {
+                    ScoopsListView(filter: filter).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
                 .safeAreaInset(edge:.top) {
                     VStack {
                         HStack() {
@@ -26,9 +34,41 @@ struct ContentView: View {
                                 Text("scoop").font(.system(size: 32, weight: .regular))
                             }
                             Spacer()
-                            HStack(spacing: 20) {
-                                addScoopButton()
-                                Image("search")
+                            ZStack {
+                                HStack(spacing: 20) {
+                                    addScoopButton()
+                                    addSearchButton()
+                                }
+                                (searching ?
+                                    AnyView(
+                                        HStack {
+                                            TextField("search", text: $searchParam)
+                                                .focused($isFocusOn)
+                                                .font(
+                                                Font.custom("Inter", size: 16)
+                                                .weight(.medium)
+                                                )
+                                                .padding(8)
+                                                .kerning(0.24)
+                                                .background(
+                                                    Rectangle()
+                                                    .foregroundColor(.clear)
+                                                    .background(Color(red: 0.99, green: 0.99, blue: 0.99))
+
+                                                    .cornerRadius(2)
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 2)
+                                                        .stroke(Color(red: 0.7, green: 0.7, blue: 0.7).opacity(0.8), lineWidth: 1.5)
+                                                    )
+                                                )
+                                            addXButton()
+                                        }.background(.white)
+                                    )
+                                    :
+                                    AnyView(
+                                        EmptyView()
+                                    )
+                                )
                             }
                         }
                         ScrollView(.horizontal) {
@@ -43,6 +83,22 @@ struct ContentView: View {
                     }
                     .padding()
                 }
+            }
+            
+            (loading ?
+                AnyView(
+                    ZStack {
+                        Rectangle()
+                            .opacity(0.6)
+                            .ignoresSafeArea()
+                        ActionIndicator()
+                    }
+                )
+                :
+                AnyView(
+                    EmptyView()
+                )
+            )
         }
     }
     
@@ -51,6 +107,29 @@ struct ContentView: View {
             AddScoopView()
         } label: {
             Image("add_scoop")
+        }
+    }
+    
+    private func addSearchButton() -> some View {
+        Button {
+            searching = true
+            isFocusOn = true
+        } label: {
+            Image("search")
+        }
+    }
+    
+    private func addXButton() -> some View {
+        Button {
+            searching = false
+            isFocusOn = false
+        } label: {
+            Image(systemName: "xmark")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 22)
+                .foregroundColor(.black)
+                
         }
     }
     

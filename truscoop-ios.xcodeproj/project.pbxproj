@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CEA8C5942B15B9FB006E7181 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8C5932B15B9FB006E7181 /* WebView.swift */; };
+		D01C5DC82B19993800AE27AA /* ActionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C5DC72B19993800AE27AA /* ActionIndicator.swift */; };
+		D01C5DCA2B19A3E600AE27AA /* ScoopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */; };
 		D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */; };
 		D096F1FD2B0AA6B000401DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F1FC2B0AA6B000401DBE /* ContentView.swift */; };
 		D096F1FF2B0AA6B300401DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D096F1FE2B0AA6B300401DBE /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		CEA8C5932B15B9FB006E7181 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D01C5DC72B19993800AE27AA /* ActionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIndicator.swift; sourceTree = "<group>"; };
+		D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopRow.swift; sourceTree = "<group>"; };
 		D096F1F72B0AA6B000401DBE /* truscoop-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "truscoop-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truscoopApp.swift; sourceTree = "<group>"; };
 		D096F1FC2B0AA6B000401DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				D096F25B2B0B03FF00401DBE /* ScoopView.swift */,
 				D096F25D2B0B06D400401DBE /* AddScoopView.swift */,
 				CEA8C5932B15B9FB006E7181 /* WebView.swift */,
+				D01C5DC72B19993800AE27AA /* ActionIndicator.swift */,
+				D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */,
 			);
 			path = truscoop;
 			sourceTree = "<group>";
@@ -379,6 +385,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01C5DC82B19993800AE27AA /* ActionIndicator.swift in Sources */,
+				D01C5DCA2B19A3E600AE27AA /* ScoopRow.swift in Sources */,
 				D096F2282B0ABDB000401DBE /* Scoop.swift in Sources */,
 				D096F25C2B0B03FF00401DBE /* ScoopView.swift in Sources */,
 				D096F1FD2B0AA6B000401DBE /* ContentView.swift in Sources */,
