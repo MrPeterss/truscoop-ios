@@ -1,0 +1,6 @@
+framework module Pods_truscoop_ios_truscoop_iosUITests {
+  umbrella header "Pods-truscoop-ios-truscoop-iosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

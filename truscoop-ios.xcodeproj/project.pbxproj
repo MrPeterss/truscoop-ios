@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D70F2644BC32F88C0879157 /* Pods_truscoop_ios_truscoop_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B2D8F87483A35BE4CF61A1 /* Pods_truscoop_ios_truscoop_iosUITests.framework */; };
+		1EDBE2E465F080CF633F9955 /* Pods_truscoop_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA7419CD5DB63FD303F328E /* Pods_truscoop_iosTests.framework */; };
 		CEA8C5942B15B9FB006E7181 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8C5932B15B9FB006E7181 /* SFSafariViewWrapper.swift */; };
+		CEF60E292B1A102900E4F944 /* APIFetchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF60E282B1A102900E4F944 /* APIFetchHandler.swift */; };
 		D01C5DC82B19993800AE27AA /* ActionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C5DC72B19993800AE27AA /* ActionIndicator.swift */; };
 		D01C5DCA2B19A3E600AE27AA /* ScoopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */; };
 		D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */; };
@@ -45,6 +48,7 @@
 		D096F25A2B0AD2C300401DBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2592B0AD2C300401DBE /* Color.swift */; };
 		D096F25C2B0B03FF00401DBE /* ScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25B2B0B03FF00401DBE /* ScoopView.swift */; };
 		D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25D2B0B06D400401DBE /* AddScoopView.swift */; };
+		E080D69100FAA2D500FE1A36 /* Pods_truscoop_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C294E372F2A17AE96F5208 /* Pods_truscoop_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +69,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BD4F78BAA4BCB88C7942091 /* Pods-truscoop-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-iosTests.release.xcconfig"; path = "Target Support Files/Pods-truscoop-iosTests/Pods-truscoop-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		46F70D48E205BFB0B852F510 /* Pods-truscoop-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios.debug.xcconfig"; path = "Target Support Files/Pods-truscoop-ios/Pods-truscoop-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		54C294E372F2A17AE96F5208 /* Pods_truscoop_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_truscoop_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C81B923BE61B2A80080ADB /* Pods-truscoop-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-truscoop-iosTests/Pods-truscoop-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73B2D8F87483A35BE4CF61A1 /* Pods_truscoop_ios_truscoop_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_truscoop_ios_truscoop_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98FCF6E3F9A2C41FE126BB46 /* Pods-truscoop-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios.release.xcconfig"; path = "Target Support Files/Pods-truscoop-ios/Pods-truscoop-ios.release.xcconfig"; sourceTree = "<group>"; };
+		C9A483CEFCEA99251EA36C13 /* Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEA8C5932B15B9FB006E7181 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		CEF60E282B1A102900E4F944 /* APIFetchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetchHandler.swift; sourceTree = "<group>"; };
 		D01C5DC72B19993800AE27AA /* ActionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIndicator.swift; sourceTree = "<group>"; };
 		D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopRow.swift; sourceTree = "<group>"; };
 		D096F1F72B0AA6B000401DBE /* truscoop-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "truscoop-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +120,8 @@
 		D096F2592B0AD2C300401DBE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D096F25B2B0B03FF00401DBE /* ScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopView.swift; sourceTree = "<group>"; };
 		D096F25D2B0B06D400401DBE /* AddScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoopView.swift; sourceTree = "<group>"; };
+		DCA7419CD5DB63FD303F328E /* Pods_truscoop_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_truscoop_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97F09C9B3F15C1E7A6A2A52 /* Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E080D69100FAA2D500FE1A36 /* Pods_truscoop_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDBE2E465F080CF633F9955 /* Pods_truscoop_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,12 +145,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D70F2644BC32F88C0879157 /* Pods_truscoop_ios_truscoop_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		205EFA83394276EB0DEB933A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46F70D48E205BFB0B852F510 /* Pods-truscoop-ios.debug.xcconfig */,
+				98FCF6E3F9A2C41FE126BB46 /* Pods-truscoop-ios.release.xcconfig */,
+				C9A483CEFCEA99251EA36C13 /* Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig */,
+				E97F09C9B3F15C1E7A6A2A52 /* Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig */,
+				68C81B923BE61B2A80080ADB /* Pods-truscoop-iosTests.debug.xcconfig */,
+				1BD4F78BAA4BCB88C7942091 /* Pods-truscoop-iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA1C8549453D97AC7702ABC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54C294E372F2A17AE96F5208 /* Pods_truscoop_ios.framework */,
+				73B2D8F87483A35BE4CF61A1 /* Pods_truscoop_ios_truscoop_iosUITests.framework */,
+				DCA7419CD5DB63FD303F328E /* Pods_truscoop_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEF60E2A2B1A103B00E4F944 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CEF60E282B1A102900E4F944 /* APIFetchHandler.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CEF60E2B2B1A108D00E4F944 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D096F2272B0ABDB000401DBE /* Scoop.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF60E2C2B1A144900E4F944 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D096F1FC2B0AA6B000401DBE /* ContentView.swift */,
+				D096F2252B0ABD5500401DBE /* ScoopsListView.swift */,
+				D096F25B2B0B03FF00401DBE /* ScoopView.swift */,
+				CEA8C5932B15B9FB006E7181 /* SFSafariViewWrapper.swift */,
+				D096F25D2B0B06D400401DBE /* AddScoopView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF60E2D2B1A148E00E4F944 /* Supporting-Views */ = {
+			isa = PBXGroup;
+			children = (
+				D01C5DC72B19993800AE27AA /* ActionIndicator.swift */,
+				D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */,
+			);
+			path = "Supporting-Views";
+			sourceTree = "<group>";
+		};
 		D096F1EE2B0AA6B000401DBE = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +219,8 @@
 				D096F20B2B0AA6B400401DBE /* truscoopTests */,
 				D096F2152B0AA6B400401DBE /* truscoopUITests */,
 				D096F1F82B0AA6B000401DBE /* Products */,
+				205EFA83394276EB0DEB933A /* Pods */,
+				AA1C8549453D97AC7702ABC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,21 +237,17 @@
 		D096F1F92B0AA6B000401DBE /* truscoop */ = {
 			isa = PBXGroup;
 			children = (
+				CEF60E2D2B1A148E00E4F944 /* Supporting-Views */,
+				CEF60E2C2B1A144900E4F944 /* Views */,
+				CEF60E2B2B1A108D00E4F944 /* Models */,
+				CEF60E2A2B1A103B00E4F944 /* API */,
 				D096F2582B0ACA8100401DBE /* Info.plist */,
 				D096F2292B0AC6C600401DBE /* Fonts */,
-				D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */,
-				D096F1FC2B0AA6B000401DBE /* ContentView.swift */,
 				D096F1FE2B0AA6B300401DBE /* Assets.xcassets */,
 				D096F2002B0AA6B300401DBE /* truscoop.entitlements */,
 				D096F2012B0AA6B300401DBE /* Preview Content */,
-				D096F2252B0ABD5500401DBE /* ScoopsListView.swift */,
-				D096F2272B0ABDB000401DBE /* Scoop.swift */,
+				D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */,
 				D096F2592B0AD2C300401DBE /* Color.swift */,
-				D096F25B2B0B03FF00401DBE /* ScoopView.swift */,
-				D096F25D2B0B06D400401DBE /* AddScoopView.swift */,
-				CEA8C5932B15B9FB006E7181 /* SFSafariViewWrapper.swift */,
-				D01C5DC72B19993800AE27AA /* ActionIndicator.swift */,
-				D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */,
 			);
 			path = truscoop;
 			sourceTree = "<group>";
@@ -239,9 +314,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D096F21C2B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-ios" */;
 			buildPhases = (
+				876C51BC8C482617A5ACAFC7 /* [CP] Check Pods Manifest.lock */,
 				D096F1F32B0AA6B000401DBE /* Sources */,
 				D096F1F42B0AA6B000401DBE /* Frameworks */,
 				D096F1F52B0AA6B000401DBE /* Resources */,
+				A4A230DE5B6BC52899A69EEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +333,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D096F21F2B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-iosTests" */;
 			buildPhases = (
+				50649AA7FCDAF7AE882505E3 /* [CP] Check Pods Manifest.lock */,
 				D096F2042B0AA6B400401DBE /* Sources */,
 				D096F2052B0AA6B400401DBE /* Frameworks */,
 				D096F2062B0AA6B400401DBE /* Resources */,
@@ -274,9 +352,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D096F2222B0AA6B400401DBE /* Build configuration list for PBXNativeTarget "truscoop-iosUITests" */;
 			buildPhases = (
+				42249A357A64F6E449A27929 /* [CP] Check Pods Manifest.lock */,
 				D096F20E2B0AA6B400401DBE /* Sources */,
 				D096F20F2B0AA6B400401DBE /* Frameworks */,
 				D096F2102B0AA6B400401DBE /* Resources */,
+				BFD635AA281C598AAAB432B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -380,6 +460,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42249A357A64F6E449A27929 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-truscoop-ios-truscoop-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50649AA7FCDAF7AE882505E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-truscoop-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		876C51BC8C482617A5ACAFC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-truscoop-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A230DE5B6BC52899A69EEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-truscoop-ios/Pods-truscoop-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-truscoop-ios/Pods-truscoop-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-truscoop-ios/Pods-truscoop-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD635AA281C598AAAB432B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D096F1F32B0AA6B000401DBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -395,6 +578,7 @@
 				D096F25A2B0AD2C300401DBE /* Color.swift in Sources */,
 				D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */,
 				D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */,
+				CEF60E292B1A102900E4F944 /* APIFetchHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +731,7 @@
 		};
 		D096F21D2B0AA6B400401DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F70D48E205BFB0B852F510 /* Pods-truscoop-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -555,6 +740,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"truscoop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = truscoop/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -584,6 +770,7 @@
 		};
 		D096F21E2B0AA6B400401DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98FCF6E3F9A2C41FE126BB46 /* Pods-truscoop-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -592,6 +779,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"truscoop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = truscoop/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -621,6 +809,7 @@
 		};
 		D096F2202B0AA6B400401DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C81B923BE61B2A80080ADB /* Pods-truscoop-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -643,6 +832,7 @@
 		};
 		D096F2212B0AA6B400401DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD4F78BAA4BCB88C7942091 /* Pods-truscoop-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -665,6 +855,7 @@
 		};
 		D096F2232B0AA6B400401DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A483CEFCEA99251EA36C13 /* Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -686,6 +877,7 @@
 		};
 		D096F2242B0AA6B400401DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97F09C9B3F15C1E7A6A2A52 /* Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

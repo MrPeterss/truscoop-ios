@@ -11,6 +11,8 @@ struct ScoopsListView: View {
     
     var filter: String
     
+    var loaded_articles = articles
+    
     var body: some View {
         ZStack (alignment: Alignment(horizontal: .center, vertical: .top)) {
             VStack {
@@ -35,7 +37,7 @@ struct ScoopsListView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             .zIndex(10)
-            List(filter == "all" ? articles : articles.filter({ $0.ai_rating == filter }), id: \.self) { scoop in
+            List(filter == "all" ? articles : loaded_articles.filter({ $0.ai_rating == filter }), id: \.self) { scoop in
                 ZStack {
                     ScoopRow(article: scoop)
                     NavigationLink {
@@ -54,8 +56,38 @@ struct ScoopsListView: View {
             .scrollIndicators(.hidden)
             .listStyle(.plain)
             .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
+        }.onLoad(
+            perform: { APIFetchHandler.sharedInstance.getAllArticles();}
+        )
+    }
+}
+
+// Taken from https://stackoverflow.com/questions/56496359/swiftui-view-viewdidload
+struct ViewDidLoadModifier: ViewModifier {
+
+    @State private var didLoad = false
+    private let action: (() -> Void)?
+
+    init(perform action: (() -> Void)? = nil) {
+        self.action = action
+    }
+
+    func body(content: Content) -> some View {
+        content.onAppear {
+            if didLoad == false {
+                didLoad = true
+                action?()
+            }
         }
     }
+}
+
+extension View {
+
+    func onLoad(perform action: (() -> Void)? = nil) -> some View {
+        modifier(ViewDidLoadModifier(perform: action))
+    }
+
 }
 
 #Preview {

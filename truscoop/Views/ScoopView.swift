@@ -48,16 +48,16 @@ struct ScoopView: View {
     }
     
     private func userRating(ratingAsFloat: Float) -> String {
-        if ratingAsFloat < 0.5 {
+        if ratingAsFloat < 1 {
             return "very liberal"
         }
-        else if ratingAsFloat < 1.5 {
+        else if ratingAsFloat < 2 {
             return "liberal"
         }
-        else if ratingAsFloat < 2.5 {
+        else if ratingAsFloat < 3 {
             return "neutral"
         }
-        else if ratingAsFloat < 3.5 {
+        else if ratingAsFloat < 4 {
             return "conservative"
         }
         else {
@@ -222,7 +222,7 @@ struct ScoopView: View {
                         } label: {
                             ZStack {
                                 Rectangle()
-                                    .fill(Color.init(hex: "E1E1E1")!)
+                                    .fill(Color.init(hex: "CFCFCF")!)
                                     .cornerRadius(20)
                                     .frame(height: 44)
                                     .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 2)
