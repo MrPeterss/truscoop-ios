@@ -56,7 +56,7 @@ struct ScoopRow: View {
                             .frame(width: 49, height: 8)
                             .background(
                                 Group {
-                                    switch article.ai_rating {
+                                    switch article.aiRating {
                                     case "liberal":
                                         Color.blue
                                     case "conservative":

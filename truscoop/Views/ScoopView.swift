@@ -43,7 +43,7 @@ struct ScoopView: View {
     }
     
     private func findSimilarScoops(rating: Float) -> ArraySlice<Scoop> {
-        var sorted = articles.sorted { abs(rating - $0.user_rating) < abs(rating - $1.user_rating) }
+        var sorted = articles.sorted { abs(rating - $0.userRating) < abs(rating - $1.userRating) }
         sorted = sorted.filter { $0.name != scoop.name}
         return sorted[0..<5]
     }
@@ -100,9 +100,9 @@ struct ScoopView: View {
             ZStack {
                 GeometryReader {geometry in
                     
-                    (scoop.top_img != "null" ?
+                    (scoop.topImg != "null" ?
                      AnyView(
-                        AsyncImage(url: URL(string: scoop.top_img)) { image in
+                        AsyncImage(url: URL(string: scoop.topImg)) { image in
                             image.resizable()
                                 .resizable()
                                 .scaledToFill()
@@ -152,9 +152,9 @@ struct ScoopView: View {
                     .foregroundColor(.white)
             }
             // Rating
-            Text(" \(scoop.ai_rating.lowercased()) ")
+            Text(" \(scoop.aiRating.lowercased()) ")
                 .font(.system(size: 18, weight: .bold))
-                .background(Color(hex: ratingToColor(rating: scoop.ai_rating)))
+                .background(Color(hex: ratingToColor(rating: scoop.aiRating)))
                 .foregroundStyle(.black)
                 .font(.headline)
             // User Racing
@@ -168,9 +168,9 @@ struct ScoopView: View {
                 Spacer()
             }
             // Rating
-            Text(" \(String(userRating(ratingAsFloat: scoop.user_rating))) ")
+            Text(" \(String(userRating(ratingAsFloat: scoop.userRating))) ")
                 .font(.system(size: 18, weight: .bold))
-                .background(Color(hex: ratingToColor(rating: userRating(ratingAsFloat: scoop.user_rating))))
+                .background(Color(hex: ratingToColor(rating: userRating(ratingAsFloat: scoop.userRating))))
                 .foregroundStyle(.black)
                 .font(.headline)
             
@@ -274,7 +274,7 @@ struct ScoopView: View {
     
     private var similarScoops: some View {
         VStack(spacing: 30) {
-            ForEach(findSimilarScoops(rating: scoop.user_rating), id:\.self) { simScoop in
+            ForEach(findSimilarScoops(rating: scoop.userRating), id:\.self) { simScoop in
                 ZStack {
                     NavigationLink {
                         ScoopView(scoop: simScoop)
