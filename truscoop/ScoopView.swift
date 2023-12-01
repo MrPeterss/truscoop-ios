@@ -12,6 +12,8 @@ struct ScoopView: View {
     @State var scoop: Scoop
     @State var selectedRating: Float = -1
     
+    @State var loading: Bool = false
+    
     @State private var showSafari: Bool = false
     
     var body: some View {
@@ -22,6 +24,21 @@ struct ScoopView: View {
             headerText
             
             article
+            
+            (loading ?
+                AnyView(
+                    ZStack {
+                        Rectangle()
+                            .opacity(0.6)
+                            .ignoresSafeArea()
+                        ActionIndicator()
+                    }
+                )
+                :
+                AnyView(
+                    EmptyView()
+                )
+            )
         }
     }
     

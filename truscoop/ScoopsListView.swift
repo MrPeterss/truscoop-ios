@@ -10,6 +10,7 @@ import SwiftUI
 struct ScoopsListView: View {
     
     var filter: String
+    @Binding var scoops: [Scoop]
     
     var body: some View {
         ZStack (alignment: Alignment(horizontal: .center, vertical: .top)) {
@@ -35,7 +36,7 @@ struct ScoopsListView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             .zIndex(10)
-            List(filter == "all" ? articles : articles.filter({ $0.ai_rating == filter }), id: \.self) { scoop in
+            List(filter == "all" ? scoops : scoops.filter({ $0.ai_rating == filter }), id: \.self) { scoop in
                 ZStack {
                     ScoopRow(article: scoop)
                     NavigationLink {
@@ -56,8 +57,4 @@ struct ScoopsListView: View {
             .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
         }
     }
-}
-
-#Preview {
-    ScoopsListView(filter: "all")
 }
