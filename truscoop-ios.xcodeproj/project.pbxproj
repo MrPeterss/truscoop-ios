@@ -22,32 +22,10 @@
 		D096F2192B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2182B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift */; };
 		D096F2262B0ABD5500401DBE /* ScoopsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2252B0ABD5500401DBE /* ScoopsListView.swift */; };
 		D096F2282B0ABDB000401DBE /* Scoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2272B0ABDB000401DBE /* Scoop.swift */; };
-		D096F2412B0AC8FB00401DBE /* Futura Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22A2B0AC8F900401DBE /* Futura Condensed.ttf */; };
-		D096F2422B0AC8FB00401DBE /* Futura Condensed ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22B2B0AC8F900401DBE /* Futura Condensed ExtraBold.ttf */; };
-		D096F2432B0AC8FB00401DBE /* Futura Extra Bold Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22C2B0AC8F900401DBE /* Futura Extra Bold Condensed Oblique.otf */; };
-		D096F2442B0AC8FB00401DBE /* Futura Light Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22D2B0AC8F900401DBE /* Futura Light Condensed Oblique.otf */; };
-		D096F2452B0AC8FB00401DBE /* Futura Medium Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22E2B0AC8FA00401DBE /* Futura Medium Oblique.otf */; };
-		D096F2462B0AC8FB00401DBE /* Futura Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F22F2B0AC8FA00401DBE /* Futura Medium.otf */; };
-		D096F2472B0AC8FB00401DBE /* Futura Bold Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2302B0AC8FA00401DBE /* Futura Bold Oblique.otf */; };
-		D096F2482B0AC8FB00401DBE /* Futura Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2312B0AC8FA00401DBE /* Futura Book.otf */; };
-		D096F2492B0AC8FB00401DBE /* Futura Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2322B0AC8FA00401DBE /* Futura Bold.otf */; };
-		D096F24A2B0AC8FB00401DBE /* Futura Extra Bold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2332B0AC8FA00401DBE /* Futura Extra Bold Condensed.otf */; };
-		D096F24B2B0AC8FB00401DBE /* Futura Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2342B0AC8FA00401DBE /* Futura Bold Italic.otf */; };
-		D096F24C2B0AC8FB00401DBE /* Futura Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2352B0AC8FA00401DBE /* Futura Light.otf */; };
-		D096F24D2B0AC8FB00401DBE /* Futura Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2362B0AC8FA00401DBE /* Futura Italic.ttf */; };
-		D096F24E2B0AC8FB00401DBE /* Futura Medium Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2372B0AC8FA00401DBE /* Futura Medium Condensed.otf */; };
-		D096F24F2B0AC8FB00401DBE /* Futura Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2382B0AC8FA00401DBE /* Futura Heavy.otf */; };
-		D096F2502B0AC8FB00401DBE /* Futura Bold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2392B0AC8FA00401DBE /* Futura Bold Condensed.otf */; };
-		D096F2512B0AC8FB00401DBE /* Futura Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23A2B0AC8FA00401DBE /* Futura Medium Italic.otf */; };
-		D096F2522B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23B2B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf */; };
-		D096F2532B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23C2B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf */; };
-		D096F2542B0AC8FB00401DBE /* Futura Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23D2B0AC8FB00401DBE /* Futura Regular.ttf */; };
-		D096F2552B0AC8FB00401DBE /* Futura Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23E2B0AC8FB00401DBE /* Futura Black.ttf */; };
-		D096F2562B0AC8FB00401DBE /* Futura Light Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = D096F23F2B0AC8FB00401DBE /* Futura Light Condensed.otf */; };
-		D096F2572B0AC8FB00401DBE /* Futura BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D096F2402B0AC8FB00401DBE /* Futura BoldItalic.ttf */; };
 		D096F25A2B0AD2C300401DBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2592B0AD2C300401DBE /* Color.swift */; };
 		D096F25C2B0B03FF00401DBE /* ScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25B2B0B03FF00401DBE /* ScoopView.swift */; };
 		D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25D2B0B06D400401DBE /* AddScoopView.swift */; };
+		D0CC8F702B1A59460026D269 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC8F6F2B1A59460026D269 /* AppData.swift */; };
 		E080D69100FAA2D500FE1A36 /* Pods_truscoop_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C294E372F2A17AE96F5208 /* Pods_truscoop_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,33 +71,11 @@
 		D096F2182B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truscoopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D096F2252B0ABD5500401DBE /* ScoopsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopsListView.swift; sourceTree = "<group>"; };
 		D096F2272B0ABDB000401DBE /* Scoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoop.swift; sourceTree = "<group>"; };
-		D096F22A2B0AC8F900401DBE /* Futura Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Condensed.ttf"; sourceTree = "<group>"; };
-		D096F22B2B0AC8F900401DBE /* Futura Condensed ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Condensed ExtraBold.ttf"; sourceTree = "<group>"; };
-		D096F22C2B0AC8F900401DBE /* Futura Extra Bold Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Extra Bold Condensed Oblique.otf"; sourceTree = "<group>"; };
-		D096F22D2B0AC8F900401DBE /* Futura Light Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Condensed Oblique.otf"; sourceTree = "<group>"; };
-		D096F22E2B0AC8FA00401DBE /* Futura Medium Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Oblique.otf"; sourceTree = "<group>"; };
-		D096F22F2B0AC8FA00401DBE /* Futura Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium.otf"; sourceTree = "<group>"; };
-		D096F2302B0AC8FA00401DBE /* Futura Bold Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Oblique.otf"; sourceTree = "<group>"; };
-		D096F2312B0AC8FA00401DBE /* Futura Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Book.otf"; sourceTree = "<group>"; };
-		D096F2322B0AC8FA00401DBE /* Futura Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold.otf"; sourceTree = "<group>"; };
-		D096F2332B0AC8FA00401DBE /* Futura Extra Bold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Extra Bold Condensed.otf"; sourceTree = "<group>"; };
-		D096F2342B0AC8FA00401DBE /* Futura Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Italic.otf"; sourceTree = "<group>"; };
-		D096F2352B0AC8FA00401DBE /* Futura Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light.otf"; sourceTree = "<group>"; };
-		D096F2362B0AC8FA00401DBE /* Futura Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Italic.ttf"; sourceTree = "<group>"; };
-		D096F2372B0AC8FA00401DBE /* Futura Medium Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Condensed.otf"; sourceTree = "<group>"; };
-		D096F2382B0AC8FA00401DBE /* Futura Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Heavy.otf"; sourceTree = "<group>"; };
-		D096F2392B0AC8FA00401DBE /* Futura Bold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Condensed.otf"; sourceTree = "<group>"; };
-		D096F23A2B0AC8FA00401DBE /* Futura Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Italic.otf"; sourceTree = "<group>"; };
-		D096F23B2B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold Condensed Oblique.otf"; sourceTree = "<group>"; };
-		D096F23C2B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Medium Condensed Oblique.otf"; sourceTree = "<group>"; };
-		D096F23D2B0AC8FB00401DBE /* Futura Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Regular.ttf"; sourceTree = "<group>"; };
-		D096F23E2B0AC8FB00401DBE /* Futura Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Black.ttf"; sourceTree = "<group>"; };
-		D096F23F2B0AC8FB00401DBE /* Futura Light Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Condensed.otf"; sourceTree = "<group>"; };
-		D096F2402B0AC8FB00401DBE /* Futura BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura BoldItalic.ttf"; sourceTree = "<group>"; };
 		D096F2582B0ACA8100401DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D096F2592B0AD2C300401DBE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D096F25B2B0B03FF00401DBE /* ScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopView.swift; sourceTree = "<group>"; };
 		D096F25D2B0B06D400401DBE /* AddScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoopView.swift; sourceTree = "<group>"; };
+		D0CC8F6F2B1A59460026D269 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		DCA7419CD5DB63FD303F328E /* Pods_truscoop_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_truscoop_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97F09C9B3F15C1E7A6A2A52 /* Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,12 +198,12 @@
 				CEF60E2B2B1A108D00E4F944 /* Models */,
 				CEF60E2A2B1A103B00E4F944 /* API */,
 				D096F2582B0ACA8100401DBE /* Info.plist */,
-				D096F2292B0AC6C600401DBE /* Fonts */,
 				D096F1FE2B0AA6B300401DBE /* Assets.xcassets */,
 				D096F2002B0AA6B300401DBE /* truscoop.entitlements */,
 				D096F2012B0AA6B300401DBE /* Preview Content */,
 				D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */,
 				D096F2592B0AD2C300401DBE /* Color.swift */,
+				D0CC8F6F2B1A59460026D269 /* AppData.swift */,
 			);
 			path = truscoop;
 			sourceTree = "<group>";
@@ -275,36 +231,6 @@
 				D096F2182B0AA6B400401DBE /* truscoopUITestsLaunchTests.swift */,
 			);
 			path = truscoopUITests;
-			sourceTree = "<group>";
-		};
-		D096F2292B0AC6C600401DBE /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				D096F23E2B0AC8FB00401DBE /* Futura Black.ttf */,
-				D096F23B2B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf */,
-				D096F2392B0AC8FA00401DBE /* Futura Bold Condensed.otf */,
-				D096F2342B0AC8FA00401DBE /* Futura Bold Italic.otf */,
-				D096F2302B0AC8FA00401DBE /* Futura Bold Oblique.otf */,
-				D096F2322B0AC8FA00401DBE /* Futura Bold.otf */,
-				D096F2402B0AC8FB00401DBE /* Futura BoldItalic.ttf */,
-				D096F2312B0AC8FA00401DBE /* Futura Book.otf */,
-				D096F22B2B0AC8F900401DBE /* Futura Condensed ExtraBold.ttf */,
-				D096F22A2B0AC8F900401DBE /* Futura Condensed.ttf */,
-				D096F22C2B0AC8F900401DBE /* Futura Extra Bold Condensed Oblique.otf */,
-				D096F2332B0AC8FA00401DBE /* Futura Extra Bold Condensed.otf */,
-				D096F2382B0AC8FA00401DBE /* Futura Heavy.otf */,
-				D096F2362B0AC8FA00401DBE /* Futura Italic.ttf */,
-				D096F22D2B0AC8F900401DBE /* Futura Light Condensed Oblique.otf */,
-				D096F23F2B0AC8FB00401DBE /* Futura Light Condensed.otf */,
-				D096F2352B0AC8FA00401DBE /* Futura Light.otf */,
-				D096F23C2B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf */,
-				D096F2372B0AC8FA00401DBE /* Futura Medium Condensed.otf */,
-				D096F23A2B0AC8FA00401DBE /* Futura Medium Italic.otf */,
-				D096F22E2B0AC8FA00401DBE /* Futura Medium Oblique.otf */,
-				D096F22F2B0AC8FA00401DBE /* Futura Medium.otf */,
-				D096F23D2B0AC8FB00401DBE /* Futura Regular.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,30 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D096F2572B0AC8FB00401DBE /* Futura BoldItalic.ttf in Resources */,
-				D096F2462B0AC8FB00401DBE /* Futura Medium.otf in Resources */,
-				D096F24B2B0AC8FB00401DBE /* Futura Bold Italic.otf in Resources */,
-				D096F24C2B0AC8FB00401DBE /* Futura Light.otf in Resources */,
-				D096F2472B0AC8FB00401DBE /* Futura Bold Oblique.otf in Resources */,
-				D096F2482B0AC8FB00401DBE /* Futura Book.otf in Resources */,
-				D096F2542B0AC8FB00401DBE /* Futura Regular.ttf in Resources */,
-				D096F2442B0AC8FB00401DBE /* Futura Light Condensed Oblique.otf in Resources */,
-				D096F24D2B0AC8FB00401DBE /* Futura Italic.ttf in Resources */,
-				D096F2512B0AC8FB00401DBE /* Futura Medium Italic.otf in Resources */,
-				D096F2522B0AC8FB00401DBE /* Futura Bold Condensed Oblique.otf in Resources */,
-				D096F2532B0AC8FB00401DBE /* Futura Medium Condensed Oblique.otf in Resources */,
-				D096F2562B0AC8FB00401DBE /* Futura Light Condensed.otf in Resources */,
-				D096F2502B0AC8FB00401DBE /* Futura Bold Condensed.otf in Resources */,
 				D096F2032B0AA6B300401DBE /* Preview Assets.xcassets in Resources */,
-				D096F2552B0AC8FB00401DBE /* Futura Black.ttf in Resources */,
-				D096F24F2B0AC8FB00401DBE /* Futura Heavy.otf in Resources */,
-				D096F24A2B0AC8FB00401DBE /* Futura Extra Bold Condensed.otf in Resources */,
-				D096F2422B0AC8FB00401DBE /* Futura Condensed ExtraBold.ttf in Resources */,
-				D096F2492B0AC8FB00401DBE /* Futura Bold.otf in Resources */,
-				D096F2432B0AC8FB00401DBE /* Futura Extra Bold Condensed Oblique.otf in Resources */,
-				D096F2452B0AC8FB00401DBE /* Futura Medium Oblique.otf in Resources */,
-				D096F24E2B0AC8FB00401DBE /* Futura Medium Condensed.otf in Resources */,
-				D096F2412B0AC8FB00401DBE /* Futura Condensed.ttf in Resources */,
 				D096F1FF2B0AA6B300401DBE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +482,7 @@
 				D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */,
 				D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */,
 				CEF60E292B1A102900E4F944 /* APIFetchHandler.swift in Sources */,
+				D0CC8F702B1A59460026D269 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

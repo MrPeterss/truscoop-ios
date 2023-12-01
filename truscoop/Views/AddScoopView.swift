@@ -152,25 +152,29 @@ struct AddScoopView: View {
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color(red: 0.76, green: 0.76, blue: 0.76), style: StrokeStyle(lineWidth: 1, dash: [2, 2]))
                             )
-                        
-                        ScrollView(.vertical) {
-                            VStack(spacing: 30) {
-                                ForEach(Array(articles.suffix(5)).reversed(), id:\.self) { simScoop in
-                                    ZStack {
-                                        NavigationLink {
-                                            ScoopView(scoop: simScoop)
-                                        } label: {
-                                            ScoopRow(article: simScoop)
-                                                .listRowSeparator(.hidden)
-                                        }.background(.clear)
-                                            .buttonStyle(.plain)
+                        VStack(alignment: .leading){
+                            Text("Similar Scoops")
+                                .font(.system(size: 18, weight: .bold))
+                                .foregroundColor(.black)
+                            ScrollView(.vertical) {
+                                VStack(spacing: 30) {
+                                    ForEach(Array(articles.suffix(5)).reversed(), id:\.self) { simScoop in
+                                        ZStack {
+                                            NavigationLink {
+                                                ScoopView(scoop: simScoop)
+                                            } label: {
+                                                ScoopRow(article: simScoop)
+                                                    .listRowSeparator(.hidden)
+                                            }.background(.clear)
+                                                .buttonStyle(.plain)
+                                        }
                                     }
-                                }
+                                }.padding(5)
                             }
                         }.padding()
                     }
                     .frame(height: geometry.size.height * 0.4)
-                }.padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
+                }.padding(EdgeInsets(top: 30, leading: 30, bottom: 30, trailing: 30))
             }
             .offset(y: geometry.size.height * 0.37)
             .safeAreaPadding(.bottom)

@@ -12,6 +12,7 @@ struct truscoopApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(filter: "all")
+                .environmentObject(AppData())
         }
     }
 }
