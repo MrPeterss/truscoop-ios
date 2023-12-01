@@ -11,7 +11,7 @@ struct AddScoopView: View {
     
     @State var url: String = ""
     @State var loading: Bool = false
-    
+
     var body: some View {
         ZStack {
             
@@ -147,16 +147,29 @@ struct AddScoopView: View {
                         Rectangle()
                             .foregroundColor(.clear)
                             .background(Color(red: 0.91, green: 0.91, blue: 0.91))
-                        
                             .cornerRadius(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color(red: 0.76, green: 0.76, blue: 0.76), style: StrokeStyle(lineWidth: 1, dash: [2, 2]))
                             )
+                        
+                        ScrollView(.vertical) {
+                            VStack(spacing: 30) {
+                                ForEach(Array(articles.suffix(5)).reversed(), id:\.self) { simScoop in
+                                    ZStack {
+                                        NavigationLink {
+                                            ScoopView(scoop: simScoop)
+                                        } label: {
+                                            ScoopRow(article: simScoop)
+                                                .listRowSeparator(.hidden)
+                                        }.background(.clear)
+                                            .buttonStyle(.plain)
+                                    }
+                                }
+                            }
+                        }.padding()
                     }
-
-                    
-                    
+                    .frame(height: geometry.size.height * 0.4)
                 }.padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
             }
             .offset(y: geometry.size.height * 0.37)
