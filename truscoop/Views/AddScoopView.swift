@@ -10,7 +10,8 @@ import SwiftUI
 struct AddScoopView: View {
     
     @State var url: String = ""
-    @State var loading: Bool = false
+    
+    @EnvironmentObject var network: NetworkWrapper
     
     var body: some View {
         ZStack {
@@ -21,7 +22,7 @@ struct AddScoopView: View {
             
             newScoop
             
-            (loading ?
+            (network.loading ?
                 AnyView(
                     ZStack {
                         Rectangle()

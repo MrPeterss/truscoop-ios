@@ -17,13 +17,13 @@ struct ContentView: View {
     
     @FocusState var isFocusOn: Bool
     
-    @State var scoops: [Scoop] = articles
+    @EnvironmentObject var network: NetworkWrapper
     
     func searchResults() -> Void {
         if search.isEmpty {
-            scoops = articles
-        } else { 
-            scoops = articles.filter{$0.name.lowercased().contains(search.lowercased())}
+            network.filtered = network.scoops
+        } else {
+            network.filtered = network.scoops.filter{$0.name.lowercased().contains(search.lowercased())}
         }
     }
     
@@ -31,7 +31,7 @@ struct ContentView: View {
         ZStack {
             NavigationStack {
                 ZStack (alignment: Alignment(horizontal: .leading, vertical: .top)) {
-                    ScoopsListView(filter: filter, scoops: $scoops).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    ScoopsListView(filter: filter).ignoresSafeArea(edges: .bottom).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
                 .safeAreaInset(edge:.top) {
                     VStack {
@@ -112,7 +112,7 @@ struct ContentView: View {
                     EmptyView()
                 )
             )
-        }
+        }.onLoad(perform: network.fetchPosts)
     }
     
     private func addScoopButton() -> some View {

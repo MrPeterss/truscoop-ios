@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct truscoopApp: App {
+    
+    @StateObject var network = NetworkWrapper()
+    
     var body: some Scene {
         WindowGroup {
             ContentView(filter: "all")
+                .environmentObject(network)
         }
     }
 }

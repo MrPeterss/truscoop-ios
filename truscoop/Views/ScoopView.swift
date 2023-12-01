@@ -16,6 +16,8 @@ struct ScoopView: View {
     
     @State private var showSafari: Bool = false
     
+    @EnvironmentObject var network: NetworkWrapper
+    
     var body: some View {
         // Header
         ZStack {

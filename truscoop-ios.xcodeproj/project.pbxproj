@@ -48,6 +48,7 @@
 		D096F25A2B0AD2C300401DBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F2592B0AD2C300401DBE /* Color.swift */; };
 		D096F25C2B0B03FF00401DBE /* ScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25B2B0B03FF00401DBE /* ScoopView.swift */; };
 		D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096F25D2B0B06D400401DBE /* AddScoopView.swift */; };
+		D0CC8F722B1A7A710026D269 /* NetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC8F712B1A7A710026D269 /* NetworkWrapper.swift */; };
 		E080D69100FAA2D500FE1A36 /* Pods_truscoop_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C294E372F2A17AE96F5208 /* Pods_truscoop_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		D096F2592B0AD2C300401DBE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D096F25B2B0B03FF00401DBE /* ScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopView.swift; sourceTree = "<group>"; };
 		D096F25D2B0B06D400401DBE /* AddScoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoopView.swift; sourceTree = "<group>"; };
+		D0CC8F712B1A7A710026D269 /* NetworkWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWrapper.swift; sourceTree = "<group>"; };
 		DCA7419CD5DB63FD303F328E /* Pods_truscoop_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_truscoop_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97F09C9B3F15C1E7A6A2A52 /* Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF60E282B1A102900E4F944 /* APIFetchHandler.swift */,
+				D0CC8F712B1A7A710026D269 /* NetworkWrapper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				D096F25A2B0AD2C300401DBE /* Color.swift in Sources */,
 				D096F1FB2B0AA6B000401DBE /* truscoopApp.swift in Sources */,
 				D096F25E2B0B06D400401DBE /* AddScoopView.swift in Sources */,
+				D0CC8F722B1A7A710026D269 /* NetworkWrapper.swift in Sources */,
 				CEF60E292B1A102900E4F944 /* APIFetchHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

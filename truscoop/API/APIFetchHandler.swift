@@ -14,7 +14,8 @@ class APIFetchHandler {
 
     private let decoder = JSONDecoder()
 
-    func getAllArticles() {
+    func getAllArticles(completion:
+                        @escaping ([Scoop]) -> Void) {
         decoder.dateDecodingStrategy = .iso8601 // Only if needed
         decoder.keyDecodingStrategy = .convertFromSnakeCase // Only if needed
         
@@ -30,8 +31,7 @@ class APIFetchHandler {
                 case .success(let articles):
 //                    let articles_base = articles.compactMap { $0.base }
                     print("Successfully fetched \(articles.count) posts")
-                    print(articles)
-//                    completion(posts)
+                    completion(articles)
                 case .failure(let error):
                     print("Error in NetworkManager.fetchPosts: \(error)")
                 }
