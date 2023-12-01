@@ -192,7 +192,7 @@ struct ScoopView: View {
             
             Spacer()
         }
-        .padding(EdgeInsets(top: 15, leading: 25, bottom: 0, trailing: 15))
+        .padding(EdgeInsets(top: 15, leading: 20, bottom: 0, trailing: 20))
     }
     
     private var article: some View {
@@ -204,11 +204,11 @@ struct ScoopView: View {
                     .cornerRadius(30)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.67, alignment: .center)
                 ScrollView(.vertical) {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 15) {
                 
                         ScrollView(.vertical) {
                             Text(scoop.summary)
-                                .font(.custom("Futura", size: 15))
+                                .font(.system(size: 15))
                         }
                         .lineLimit(15)
                         
@@ -216,10 +216,10 @@ struct ScoopView: View {
                         VStack {
                             HStack(spacing: 3) {
                                 Text("Your")
-                                    .font(.custom("Futura Bold", size: 18))
+                                    .font(.system(size: 18, weight: .bold))
                                     .foregroundColor(.black)
                                 Text("Rating")
-                                    .font(.custom("Futura", size: 18))
+                                    .font(.system(size: 18))
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -233,7 +233,6 @@ struct ScoopView: View {
                             .frame(height: 30)
                             .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
                         }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                         
                         // Button to webview
                         Button {
@@ -254,15 +253,27 @@ struct ScoopView: View {
                                 SFSafariViewWrapper(url: URL(string: scoop.url)!)
                                     .ignoresSafeArea()
                             })
+                        }.padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .background(Color(red: 0.91, green: 0.91, blue: 0.91))
+                                .cornerRadius(8)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color(red: 0.76, green: 0.76, blue: 0.76), style: StrokeStyle(lineWidth: 1, dash: [2, 2]))
+                                )
+                            VStack(alignment: .leading) {
+                                
+                                // related scoops
+                                Text("Recently Added Scoops")
+                                    .font(.system(size: 18, weight: .bold))
+                                    .foregroundColor(.black)
+                                
+                                
+                                similarScoops.padding(5)
+                            }.padding()
                         }
-                        
-                        // related scoops
-                        Text("Related Scoops")
-                            .font(.custom("Futura Bold", size: 18))
-                            .foregroundColor(.black)
-                        
-                        
-                        similarScoops.padding(5)
                     }
                 }
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
