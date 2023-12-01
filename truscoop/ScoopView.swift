@@ -12,6 +12,8 @@ struct ScoopView: View {
     @State var scoop: Scoop
     @State var selectedRating: Float = -1
     
+    @State private var showSafari: Bool = false
+    
     var body: some View {
         // Header
         ZStack {
@@ -215,9 +217,8 @@ struct ScoopView: View {
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                         
                         // Button to webview
-                        NavigationLink {
-                            SwiftUIWebView(url: URL(string: scoop.url))
-                                .navigationTitle("Truscoop Article Viewer")
+                        Button {
+                            showSafari.toggle()
                         } label: {
                             ZStack {
                                 Rectangle()
@@ -230,6 +231,10 @@ struct ScoopView: View {
                                     .font(.system(size: 18, weight: .bold))
                                     .foregroundColor(.black)
                             }
+                            .fullScreenCover(isPresented: $showSafari, content: {
+                                SFSafariViewWrapper(url: URL(string: scoop.url)!)
+                                    .ignoresSafeArea()
+                            })
                         }
                         
                         // related scoops
@@ -254,14 +259,13 @@ struct ScoopView: View {
         VStack(spacing: 30) {
             ForEach(findSimilarScoops(rating: scoop.user_rating), id:\.self) { simScoop in
                 ZStack {
-                    ScoopRow(article: simScoop)
-                        .listRowSeparator(.hidden)
                     NavigationLink {
-                        ScoopView(scoop: scoop)
+                        ScoopView(scoop: simScoop)
                     } label: {
-                        EmptyView()
-                    }
-                    .opacity(0.0)
+                        ScoopRow(article: simScoop)
+                            .listRowSeparator(.hidden)
+                    }.background(.clear)
+                        .buttonStyle(.plain)
                 }
             }
         }
