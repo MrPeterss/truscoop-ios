@@ -18,8 +18,8 @@ class NetworkWrapper: ObservableObject {
         APIFetchHandler.sharedInstance.getAllArticles(
             completion: { [weak self] scoops in
                 guard let self = self else { return }
-                self.scoops = scoops
-                self.filtered = scoops.reversed()
+                self.scoops = scoops.reversed()
+                self.filtered = self.scoops
                 // Perform UI update on main queue
                 DispatchQueue.main.async {
                     self.loading = false

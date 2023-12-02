@@ -52,6 +52,16 @@ struct ScoopView: View {
                     }
             })
         })
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ShareLink(item: scoop.url) {
+                    Image(systemName: "square.and.arrow.up.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.blue)
+                }
+            }
+        }
     }
     
     private func findSimilarScoops(rating: Float) -> ArraySlice<Scoop> {

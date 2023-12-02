@@ -11,6 +11,14 @@ struct AddScoopView: View {
     
     @State var url: String = ""
     
+    @State private var failedToAddScoop: Bool = false
+    @State private var errorMsg: String = ""
+    
+    @State var showAlreadyThereModal: Bool = false
+    
+    @State var alreadyThereScoop: Scoop = articles[0]
+    
+    
     @EnvironmentObject var network: NetworkWrapper
     
     var body: some View {
@@ -32,6 +40,60 @@ struct AddScoopView: View {
                     }
                 )
                 :
+                AnyView(
+                    EmptyView()
+                )
+            )
+            
+            (showAlreadyThereModal ?
+                AnyView(
+                    GeometryReader {geometry in
+                        ZStack {
+                            Rectangle()
+                                .opacity(0.6)
+                                .ignoresSafeArea()
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                                Rectangle()
+                                    .fill(Color(hex: "F3F3F3")!)
+                                    .cornerRadius(15)
+                                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.3, alignment: .center)
+                                VStack(alignment: .center, spacing: 20) {
+                                    Text("Article already found")
+                                        .font(.system(size: 24, weight: .bold))
+                                    Text("This article already exists in our database. Would you like to open it now?")
+                                        .font(.system(size: 14))
+                                    VStack(spacing: 15) {
+                                        NavigationLink {
+                                            ScoopView(scoop: alreadyThereScoop)
+                                        } label: {
+                                            ZStack {
+                                                Rectangle()
+                                                    .fill(Color.init(hex: "CFCFCF")!)
+                                                    .cornerRadius(20)
+                                                    .frame(height: 44)
+                                                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 2)
+                                                Text("Open Now")
+                                                    .font(.system(size: 18, weight: .bold))
+                                                    .foregroundColor(.black)
+                                            }
+                                        }
+                                        
+                                        Button {
+                                            showAlreadyThereModal = false
+                                        } label: {
+                                            Text("No thanks")
+                                                .font(.system(size: 12))
+                                                .foregroundColor(.red)
+                                        }
+                                    }
+                                }.padding(20)
+                                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.3, alignment: .center)
+                            }
+                            
+                        }
+                    }
+                )
+             :
                 AnyView(
                     EmptyView()
                 )
@@ -108,38 +170,63 @@ struct AddScoopView: View {
                     .cornerRadius(30)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.67, alignment: .center)
                 VStack(spacing: 30) {
-                    
-                    TextField("paste url here", text: $url)
-                        .font(
-                        Font.custom("Inter", size: 16)
-                        .weight(.medium)
-                        )
-                        .padding(11)
-                        .kerning(0.24)
-                        .background(
-                            Rectangle()
-                            .foregroundColor(.clear)
-                            .background(Color(red: 0.99, green: 0.99, blue: 0.99))
-
-                            .cornerRadius(2)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 2)
-                                .stroke(Color(red: 0.7, green: 0.7, blue: 0.7).opacity(0.8), lineWidth: 1.5)
+                    VStack {
+                        TextField("paste url here", text: $url)
+                            .font(
+                                Font.custom("Inter", size: 16)
+                                    .weight(.medium)
                             )
+                            .padding(11)
+                            .kerning(0.24)
+                            .background(
+                                Rectangle()
+                                    .foregroundColor(.clear)
+                                    .background(Color(red: 0.99, green: 0.99, blue: 0.99))
+                                
+                                    .cornerRadius(2)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 2)
+                                            .stroke(Color(red: 0.7, green: 0.7, blue: 0.7).opacity(0.8), lineWidth: 1.5)
+                                    )
+                            )
+                        
+                        (
+                            failedToAddScoop ?
+                            AnyView(
+                                Text(errorMsg)
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.red)
+                                )
+                            :
+                                AnyView(EmptyView())
                         )
+                    }
                     
                     Button {
                         network.addArticle(url: url, completion: { updated in
                             DispatchQueue.main.async {
                                 guard let newScoop = updated else {
-                                    print("POOPY BALLS")
+                                    failedToAddScoop = true
                                     network.loading = false
+                                    
+                                    // check and see if it already exists
+                                    network.scoops.forEach { val in
+                                        if url == val.url {
+                                            alreadyThereScoop = val
+                                            showAlreadyThereModal = true
+                                            errorMsg = "Please enter a url that is not in our database"
+                                            return
+                                        }
+                                    }
+                                    if !showAlreadyThereModal {
+                                        errorMsg = "Please enter a valid url"
+                                    }
                                     return
                                 }
                                 network.scoops.insert(newScoop, at: 0)
                                 network.filtered.insert(newScoop, at: 0)
                                 network.loading = false
-                                print("LOADING NEW ONE")
+                                failedToAddScoop = false
                             }
                             
                         })
@@ -166,7 +253,7 @@ struct AddScoopView: View {
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color(red: 0.76, green: 0.76, blue: 0.76), style: StrokeStyle(lineWidth: 1, dash: [2, 2]))
                             )
-                        VStack(alignment: .leading){
+                        VStack(alignment: .leading) {
                             Text("Recently Added Scoops")
                                 .font(.system(size: 18, weight: .bold))
                                 .foregroundColor(.black)
