@@ -18,6 +18,8 @@ struct AddScoopView: View {
     
     @State var alreadyThereScoop: Scoop = articles[0]
     
+    @State var pushActive: Bool = false
+    
     
     @EnvironmentObject var network: NetworkWrapper
     
@@ -89,7 +91,6 @@ struct AddScoopView: View {
                                 }.padding(20)
                                     .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.3, alignment: .center)
                             }
-                            
                         }
                     }
                 )
@@ -98,6 +99,9 @@ struct AddScoopView: View {
                     EmptyView()
                 )
             )
+        }
+        .navigationDestination(isPresented: $pushActive) {
+            ScoopView(scoop: alreadyThereScoop)
         }
     }
     
@@ -227,6 +231,8 @@ struct AddScoopView: View {
                                 network.filtered.insert(newScoop, at: 0)
                                 network.loading = false
                                 failedToAddScoop = false
+                                alreadyThereScoop = newScoop
+                                pushActive = true
                             }
                             
                         })
@@ -259,7 +265,7 @@ struct AddScoopView: View {
                                 .foregroundColor(.black)
                             ScrollView(.vertical) {
                                 VStack(spacing: 30) {
-                                    ForEach(Array(network.scoops.suffix(5)).reversed(), id:\.self) { simScoop in
+                                    ForEach(Array(network.scoops.prefix(5)), id:\.self) { simScoop in
                                         ZStack {
                                             NavigationLink {
                                                 ScoopView(scoop: simScoop)
