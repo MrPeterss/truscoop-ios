@@ -23,7 +23,7 @@ class APIFetchHandler {
     
     private let decoder = JSONDecoder()
     
-    private let server = "http://127.0.0.1:8000/"
+    private let server = "http://35.236.220.70/"
     
     init() {
         decoder.dateDecodingStrategy = .iso8601
