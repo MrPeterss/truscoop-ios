@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScoopRow: View {
     
-    let article: Scoop
+    @State var article: Scoop
     
     var body: some View {
         ZStack {
@@ -42,7 +42,7 @@ struct ScoopRow: View {
                     Text(article.name)
                         .font(.system(size: 24, weight: .bold))
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                    Text("\(article.summary)\n\n")
+                    Text("\(article.summary.replacingOccurrences(of: "\n", with: " "))\n\n")
                         .font(.system(size: 14))
                         .lineLimit(3)
                 }

@@ -29,7 +29,7 @@ struct ScoopsListView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             .zIndex(10)
-            List(filter == "all" ? network.scoops : network.scoops.filter({ $0.aiRating == filter }), id: \.self) { scoop in
+            List(filter == "all" ? network.filtered : network.filtered.filter({ $0.aiRating == filter }), id: \.self) { scoop in
                 ZStack {
                     ScoopRow(article: scoop)
                     NavigationLink {

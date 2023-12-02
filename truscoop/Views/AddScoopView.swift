@@ -83,7 +83,7 @@ struct AddScoopView: View {
             
             VStack (alignment: .leading, spacing: 5) {
                 
-                Text("Find the reliability and bias of a news source fast, with accurate and up-to-date predictions using Artificial Intelligence. Paste the link below to get started.")
+                Text("Find the political bias of a news article fast, with accurate and up-to-date predictions using Artificial Intelligence. Paste the link below to get started.")
                     .font(.system(size: 16, weight: .regular))
                     .foregroundColor(Color(hex: "E0E0E0"))
                 
@@ -148,17 +148,34 @@ struct AddScoopView: View {
                         Rectangle()
                             .foregroundColor(.clear)
                             .background(Color(red: 0.91, green: 0.91, blue: 0.91))
-                        
                             .cornerRadius(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color(red: 0.76, green: 0.76, blue: 0.76), style: StrokeStyle(lineWidth: 1, dash: [2, 2]))
                             )
+                        VStack(alignment: .leading){
+                            Text("Recently Added Scoops")
+                                .font(.system(size: 18, weight: .bold))
+                                .foregroundColor(.black)
+                            ScrollView(.vertical) {
+                                VStack(spacing: 30) {
+                                    ForEach(Array(network.scoops.suffix(5)).reversed(), id:\.self) { simScoop in
+                                        ZStack {
+                                            NavigationLink {
+                                                ScoopView(scoop: simScoop)
+                                            } label: {
+                                                ScoopRow(article: simScoop)
+                                                    .listRowSeparator(.hidden)
+                                            }.background(.clear)
+                                                .buttonStyle(.plain)
+                                        }
+                                    }
+                                }.padding(5)
+                            }
+                        }.padding()
                     }
-
-                    
-                    
-                }.padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
+                    .frame(height: geometry.size.height * 0.4)
+                }.padding(EdgeInsets(top: 30, leading: 30, bottom: 30, trailing: 30))
             }
             .offset(y: geometry.size.height * 0.37)
             .safeAreaPadding(.bottom)

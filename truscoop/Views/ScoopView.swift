@@ -41,11 +41,21 @@ struct ScoopView: View {
                     EmptyView()
                 )
             )
-        }
+        }.onLoad(perform: {
+            network.getVote(scoop_id: scoop.id, completion: { rating in
+                    DispatchQueue.main.async {
+                        if rating != -1 {
+                            selectedRating = Float(rating)
+                            print("selected", selectedRating)
+                        }
+                        network.loading = false
+                    }
+            })
+        })
     }
     
     private func findSimilarScoops(rating: Float) -> ArraySlice<Scoop> {
-        var sorted = articles.sorted { abs(rating - $0.userRating) < abs(rating - $1.userRating) }
+        var sorted = network.scoops.sorted { abs(rating - $0.userRating) < abs(rating - $1.userRating) }
         sorted = sorted.filter { $0.name != scoop.name}
         return sorted[0..<5]
     }
@@ -67,16 +77,19 @@ struct ScoopView: View {
     }
     
     private func userRating(ratingAsFloat: Float) -> String {
-        if ratingAsFloat < 1 {
+        if ratingAsFloat == -1 {
+            return "unrated"
+        }
+        else if ratingAsFloat < 0.5 {
             return "very liberal"
         }
-        else if ratingAsFloat < 2 {
+        else if ratingAsFloat < 1.5 {
             return "liberal"
         }
-        else if ratingAsFloat < 3 {
+        else if ratingAsFloat < 2.5 {
             return "neutral"
         }
-        else if ratingAsFloat < 4 {
+        else if ratingAsFloat < 3.5 {
             return "conservative"
         }
         else {
@@ -86,15 +99,21 @@ struct ScoopView: View {
     
     private func userInButton(color: String, value: Float) -> some View {
         Button {
-            print("selected rating set to \(value)")
-            selectedRating = value
+            if selectedRating != value {
+                print("selected rating set to \(value)")
+                network.addVote(scoop_id: scoop.id, vote: value)
+                selectedRating = value
+            } else {
+                selectedRating = -1
+                network.removeVote(scoop_id: scoop.id)
+            }
         } label: {
             RoundedRectangle(cornerRadius: 5)
                 .fill(Color(hex: color)!)
                 .stroke(selectedRating == value ? .black: .clear, lineWidth: 3)
                 .shadow(color: .black.opacity(0.5), radius: 1, x: 0, y: 1)
 
-        }.disabled(value == selectedRating)
+        }.disabled(network.loading)
     }
     
     private var headerImage: some View {
@@ -207,7 +226,7 @@ struct ScoopView: View {
                     VStack(alignment: .leading, spacing: 15) {
                 
                         ScrollView(.vertical) {
-                            Text(scoop.summary)
+                            Text(scoop.summary.replacingOccurrences(of: "\n", with: " "))
                                 .font(.system(size: 15))
                         }
                         .lineLimit(15)
@@ -224,11 +243,11 @@ struct ScoopView: View {
                                 Spacer()
                             }
                             HStack(spacing: 10) {
-                                userInButton(color: "0F7FBC", value: 0)
-                                userInButton(color: "5AB0EE", value: 1)
-                                userInButton(color: "909090", value: 2)
-                                userInButton(color: "E86868", value: 3)
-                                userInButton(color: "BC5050", value: 4)
+                                userInButton(color: "0F7FBC", value: 0.0)
+                                userInButton(color: "5AB0EE", value: 1.0)
+                                userInButton(color: "909090", value: 2.0)
+                                userInButton(color: "E86868", value: 3.0)
+                                userInButton(color: "BC5050", value: 4.0)
                             }
                             .frame(height: 30)
                             .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
@@ -266,7 +285,7 @@ struct ScoopView: View {
                             VStack(alignment: .leading) {
                                 
                                 // related scoops
-                                Text("Recently Added Scoops")
+                                Text("Related Scoops")
                                     .font(.system(size: 18, weight: .bold))
                                     .foregroundColor(.black)
                                 

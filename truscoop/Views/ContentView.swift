@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @State var filter: String
-    @State var loading: Bool = false
     @State var searching: Bool = false
     
     @State var search: String = ""
@@ -98,7 +97,7 @@ struct ContentView: View {
                 }
             }
             
-            (loading ?
+            (network.loading ?
                 AnyView(
                     ZStack {
                         Rectangle()

@@ -22,11 +22,5 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Futura Bold Condensed.otf</string>
-		<string>Futura Book.otf</string>
-		<string>Futura Bold.otf</string>
-	</array>
 </dict>
 </plist>
