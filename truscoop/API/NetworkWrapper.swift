@@ -19,10 +19,7 @@ class NetworkWrapper: ObservableObject {
             completion: { [weak self] scoops in
                 guard let self = self else { return }
                 self.scoops = scoops
-                self.filtered = scoops.sorted {
-                    $0.date > $1.date
-                }
-
+                self.filtered = scoops.reversed()
                 // Perform UI update on main queue
                 DispatchQueue.main.async {
                     self.loading = false
@@ -35,26 +32,19 @@ class NetworkWrapper: ObservableObject {
         APIFetchHandler.sharedInstance.getVote(scoop_id: scoop_id, completion: completion)
     }
     
-    func addVote(scoop_id: String, vote: Float) -> Void {
+    func addVote(scoop_id: String, vote: Float, completion: @escaping (Scoop) -> Void) -> Void {
         loading = true
-        APIFetchHandler.sharedInstance.addVote(scoop_id: scoop_id, vote: vote, completion: { [weak self] scoop in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                self.fetchPosts()
-            }
-        })
+        APIFetchHandler.sharedInstance.addVote(scoop_id: scoop_id, vote: vote, completion: completion)
     }
     
-    func removeVote(scoop_id: String) -> Void {
+    func removeVote(scoop_id: String, completion: @escaping (Scoop) -> Void) -> Void {
         loading = true
-        APIFetchHandler.sharedInstance.removeVote(scoop_id: scoop_id, completion: { [weak self] scoop in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                self.fetchPosts()
-            }
-        })
+        APIFetchHandler.sharedInstance.removeVote(scoop_id: scoop_id, completion: completion)
+    }
+
+    func addArticle(url: String, completion: @escaping (Scoop?) -> Void) -> Void {
+        loading = true
+        APIFetchHandler.sharedInstance.addArticle(url: url, completion: completion)
     }
 }
 

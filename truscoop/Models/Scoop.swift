@@ -20,7 +20,7 @@ struct Scoop: Hashable & Codable {
     let date: Date
     let summary: String
     let aiRating: String
-    let userRating: Float
+    var userRating: Float
 }
 
 // From here https://stackoverflow.com/questions/46344963/swift-jsondecode-decoding-arrays-fails-if-single-element-decoding-fails

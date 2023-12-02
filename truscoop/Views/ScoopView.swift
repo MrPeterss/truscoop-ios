@@ -101,11 +101,23 @@ struct ScoopView: View {
         Button {
             if selectedRating != value {
                 print("selected rating set to \(value)")
-                network.addVote(scoop_id: scoop.id, vote: value)
+                network.addVote(scoop_id: scoop.id, vote: value, completion: { updated in
+                    
+                    DispatchQueue.main.async {
+                        network.fetchPosts()
+                        scoop.userRating = updated.userRating
+                    }
+                })
                 selectedRating = value
             } else {
                 selectedRating = -1
-                network.removeVote(scoop_id: scoop.id)
+                network.removeVote(scoop_id: scoop.id, completion: { updated in
+                    
+                    DispatchQueue.main.async {
+                        network.fetchPosts()
+                        scoop.userRating = updated.userRating
+                    }
+                })
             }
         } label: {
             RoundedRectangle(cornerRadius: 5)

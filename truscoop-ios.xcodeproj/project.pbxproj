@@ -56,6 +56,7 @@
 		C9A483CEFCEA99251EA36C13 /* Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-truscoop-ios-truscoop-iosUITests/Pods-truscoop-ios-truscoop-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEA8C5932B15B9FB006E7181 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		CEF60E282B1A102900E4F944 /* APIFetchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetchHandler.swift; sourceTree = "<group>"; };
+		CEF60E2E2B1ABD6300E4F944 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
 		D01C5DC72B19993800AE27AA /* ActionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIndicator.swift; sourceTree = "<group>"; };
 		D01C5DC92B19A3E600AE27AA /* ScoopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopRow.swift; sourceTree = "<group>"; };
 		D096F1F72B0AA6B000401DBE /* truscoop-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "truscoop-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +205,7 @@
 				D096F2012B0AA6B300401DBE /* Preview Content */,
 				D096F1FA2B0AA6B000401DBE /* truscoopApp.swift */,
 				D096F2592B0AD2C300401DBE /* Color.swift */,
+				CEF60E2E2B1ABD6300E4F944 /* todo.md */,
 			);
 			path = truscoop;
 			sourceTree = "<group>";

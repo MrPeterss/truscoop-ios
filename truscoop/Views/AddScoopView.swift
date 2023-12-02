@@ -129,7 +129,20 @@ struct AddScoopView: View {
                         )
                     
                     Button {
-                        
+                        network.addArticle(url: url, completion: { updated in
+                            DispatchQueue.main.async {
+                                guard let newScoop = updated else {
+                                    print("POOPY BALLS")
+                                    network.loading = false
+                                    return
+                                }
+                                network.scoops.insert(newScoop, at: 0)
+                                network.filtered.insert(newScoop, at: 0)
+                                network.loading = false
+                                print("LOADING NEW ONE")
+                            }
+                            
+                        })
                     } label: {
                         ZStack {
                             Rectangle()
